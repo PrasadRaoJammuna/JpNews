@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block  content %}
+<h1> search results:'{{ data }}' </h1>
+<samall style='color:green;'> Top 20 results here.</small> 
+<div class="card-group">
+{% set c=0 %}
+{% for i in articles[:4] %}
+<div class="card border border-success">
+  <img class="card-img-top rounded" src="{{i['urlToImage']}}" height=175px alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ i['title'] }}</h5> 
+    <span><b>Published:</b><i>{{i['publishedAt'][:10]}}</i></span>
+    <p class="card-text">{{ i['description'][:120] }}... </p>
+    <a href="{{i['url']}}" class="btn btn-success">Read more</a>
+  </div>
+</div>
+
+{% endfor %}
+</div>
+
+<div class="card-group">
+{% for i in articles[4:8] %}
+<div class="card border border-success">
+  <img class="card-img-top rounded" src="{{i['urlToImage']}}" height=175px alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ i['title'] }}</h5> 
+    <span><b>Published:</b><i>{{i['publishedAt'][:10]}}</i></span>
+    <p class="card-text">{{ i['description'][:120] }}... </p>
+    <a href="{{i['url']}}" class="btn btn-success">Read more</a>
+  </div>
+</div>
+{% endfor %}
+<div>
+
+<div class="card-group">
+{% for i in articles[8:12] %}
+<div class="card border border-success">
+  <img class="card-img-top rounded" src="{{i['urlToImage']}}" height=175px alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ i['title'] }}</h5> 
+    <span><b>Published:</b><i>{{i['publishedAt'][:10]}}</i></span>
+    <p class="card-text">{{ i['description'][:120] }}... </p>
+    <a href="{{i['url']}}" class="btn btn-success">Read more</a>
+  </div>
+</div>
+{% endfor %}
+<div>
+
+<div class="card-group">
+{% for i in articles[12:16] %}
+<div class="card border border-success">
+  <img class="card-img-top rounded" src="{{i['urlToImage']}}" height=175px alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ i['title'] }}</h5> 
+    <span><b>Published:</b><i>{{i['publishedAt'][:10]}}</i></span>
+    <p class="card-text">{{ i['description'][:120] }}... </p>
+    <a href="{{i['url']}}" class="btn btn-success">Read more</a>
+  </div>
+</div>
+{% endfor %}
+<div>
+
+<div class="card-group">
+{% for i in articles[16:20] %}
+<div class="card border border-success">
+  <img class="card-img-top rounded-10" src="{{i['urlToImage']}}" height=175px alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ i['title'] }}</h5> 
+    <span><b>Published:</b><i>{{i['publishedAt'][:10]}}</i></span>
+    <p class="card-text">{{ i['description'][:120] }}... </p>
+    <a href="{{i['url']}}" class="btn btn-success">Read more</a>
+  </div>
+</div>
+{% endfor %}
+<div>
+
+{% endblock  %}}

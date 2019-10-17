@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1> Top Head Lines </h1>
+<div class="card-group" >
+{% for i in articles[:4] %}
+
+<div class="card border border-success">
+  <img class="card-img-top rounded" src="{{i['urlToImage']}}" height=175px  alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ i['title'] }}</h5> 
+    <span><b>Published: </b><i>{{ i['publishedAt'][:10]}}</i></span>
+    <p class="card-text">{{ i['description'][:100] }}... </p>
+    <a href="{{i['url']}}" class="btn btn-success">Read more</a>
+  </div>
+</div>
+
+{% endfor %}
+</div>
+
+
+<div class="card-group" >
+{% for i in articles[4:8] %}
+
+<div class="card border border-success">
+
+  <img class="card-img-top" src="{{i['urlToImage']}}" height=175px  alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ i['title'] }}</h5> 
+    <span><b>Published: </b><i>{{ i['publishedAt'][:10]}}</i></span>
+    <p class="card-text">{{ i['description'][:100]}}... </p>
+    
+    <a href="{{i['url']}}" class="btn btn-success">Read more</a>
+  </div>
+</div>
+
+{% endfor %}
+</div>
+
+{% endblock %}
