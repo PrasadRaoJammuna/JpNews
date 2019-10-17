@@ -1,4 +1,5 @@
 # JpNews
+#### https://jpnews.herokuapp.com/ visit Now.
 
 #### read world wide news
 
