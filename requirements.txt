@@ -3,7 +3,7 @@ Flask-Compress==1.4.0
 gunicorn==19.9.0
 requests==2.21.0
 requests-oauthlib==1.2.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 Werkzeug==0.15.4
 MarkupSafe==1.1.1
 itsdangerous==1.1.0
